@@ -1,0 +1,43 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+     "title": "Unite Summit3",
+     "details": "Um evento para quem é apaixonado por programação",
+     "maximumAttendees": 100
+}
+
+###
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+     "title": "Unite Summit3",
+     "details": null,
+     "maximumAttendees": 100
+}
+
+###
+
+POST http://localhost:3333/events/0a0b7844-167c-40d3-aae3-847bbf539d67/attendees
+Content-Type: application/json
+
+{
+     "name": "Gustavo Barbosa",
+     "email": "gustavo2@gmail.com"
+}    
+
+###
+
+GET http://localhost:3333/events/0a0b7844-167c-40d3-aae3-847bbf539d67
+
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+
+###
+GET http://localhost:3333/attendees/3/check-in
+
+###
+GET http://localhost:3333/events/0a0b7844-167c-40d3-aae3-847bbf539d67/attendees?query=a
